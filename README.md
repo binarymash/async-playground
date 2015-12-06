@@ -1,7 +1,8 @@
 # async-playground
 
 ##Description
-It provides functional demonstrations of the situations in which blocking async code will/will not lead to deadlocks
+
+This is a practical demonstration of common gotchas enconutered when implementing asynchronous code in .net using the Task-based Asynchronous Pattern (TAP), aka async/await. It demonstrates situations in which blocking async code will/will not lead to deadlocks
 
 ##Code
 
