@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.Playground.Async
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.Playground.Async.BusinessLogic.Tests", "BinaryMash.Playground.Async.BusinessLogic.Tests\BinaryMash.Playground.Async.BusinessLogic.Tests.csproj", "{849F2F44-AD97-4D27-A69B-8879062334B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.AsyncPlayground.AspNetHost", "BinaryMash.AsyncPlayground.AspNetHost\BinaryMash.AsyncPlayground.AspNetHost.csproj", "{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{849F2F44-AD97-4D27-A69B-8879062334B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{849F2F44-AD97-4D27-A69B-8879062334B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{849F2F44-AD97-4D27-A69B-8879062334B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,5 +47,6 @@ Global
 		{37537503-CC7C-44E9-99C7-798CE82C1363} = {CAD25EAA-2588-4685-9065-A4EA07DCEB6E}
 		{5AC11F0E-FD34-4AA8-9D9A-1BA1A2FB8A6B} = {4F79A6B7-B43F-46C5-8009-6F7C495CC166}
 		{849F2F44-AD97-4D27-A69B-8879062334B9} = {DA3BD989-7EDB-45ED-8B72-9A8D5E44ED20}
+		{23214DA4-5729-46B0-A5DE-A7616EB8D5C9} = {CAD25EAA-2588-4685-9065-A4EA07DCEB6E}
 	EndGlobalSection
 EndGlobal
