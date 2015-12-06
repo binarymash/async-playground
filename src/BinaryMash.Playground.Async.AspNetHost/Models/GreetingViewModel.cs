@@ -1,13 +1,14 @@
-﻿namespace BinaryMash.Playground.Async.BusinessLogic
+﻿namespace BinaryMash.Playground.Async.AspNetHost.Models
 {
-    public class GreetingResult
+    public class GreetingViewModel
     {
+        public string Greeting { get; set; }
+
         public bool HasSynchronizationContext { get; set; }
 
         public int InitialCurrentThreadId { get; set; }
 
         public int FinalCurrentThreadId { get; set; }
 
-        public string Greeting { get; set; }
     }
 }

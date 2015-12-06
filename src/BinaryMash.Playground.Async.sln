@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.Playground.Async
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.Playground.Async.BusinessLogic.Tests", "BinaryMash.Playground.Async.BusinessLogic.Tests\BinaryMash.Playground.Async.BusinessLogic.Tests.csproj", "{849F2F44-AD97-4D27-A69B-8879062334B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.AsyncPlayground.AspNetHost", "BinaryMash.AsyncPlayground.AspNetHost\BinaryMash.AsyncPlayground.AspNetHost.csproj", "{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.Playground.Async.AspNetHost", "BinaryMash.Playground.Async.AspNetHost\BinaryMash.Playground.Async.AspNetHost.csproj", "{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

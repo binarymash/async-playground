@@ -1,0 +1,54 @@
+﻿@model BinaryMash.Playground.Async.AspNetHost.Models.GreetingViewModel
+@{
+    ViewBag.Title = "Asynchronous playground";
+}
+<h1>ASP.NET Asynchronous Blocking Behaviour</h1>
+<p>
+    This page demonstrates the behaviour of blocking asynchronous code when running in ASP.NET. Some of the actions here will result in deadlocks; like a UI-based application, ASP.NET runs with a synchronization context, which is why we see deadlocks when blocking the asynchronous code.
+</p>
+<p>
+    The same code running in a host that does not have a synchronization context will not deadlock. For example, unless explicitly coded, a console application or unit tests will run without a sychronization context.
+</p>
+<h2>Asynchronous actions</h2>
+<p>The calls we make here are to actions that return <code>async Task&lt;ActionResult&gt;</code>. The underlying functionality is either synchronous or asynchronous, depending on the option selected.</p>
+<ul>
+    <li>
+        @Html.ActionLink("Fully asynchronous stack", "ACGreetingAsync", "Greeting")
+    </li>
+    <li>
+        @Html.ActionLink("Asynchronous stack blocked with .GetAwaiter().GetResult() on captured context", "ACGreetingBlockedWithAwaiterResultOnCapturedContext", "Greeting") <span class="label label-danger">deadlock</span>
+    </li>
+    <li>
+        @Html.ActionLink("Asynchronous stack blocked with .GetAwaiter().GetResult() on other context", "ACGreetingBlockedWithAwaiterResultOnOtherContext", "Greeting") <span class="label label-danger">deadlock</span>
+    </li>
+    <li>
+        @Html.ActionLink("Asynchronous stack blocked with .Result() on captured context", "ACGreetingBlockedWithResultOnCapturedContext", "Greeting") <span class="label label-danger">deadlock</span>
+    </li>    
+    <li>
+        @Html.ActionLink("Fully synchronous stack", "ACGreeting", "Greeting")
+    </li> 
+</ul>
+
+<h2>Synchronous actions</h2>
+<p>The calls we make here are to actions that return <code>ActionResult</code>.</p>
+<ul>
+    <li class="text-muted">
+        Fully asynchronous stack <span class="label label-default">unavailable</span>
+    </li>
+    <li>
+        @Html.ActionLink("Asynchronous stack blocked with .GetAwaiter().GetResult() on captured context", "SCGreetingBlockedWithAwaiterResultOnCapturedContext", "Greeting") <span class="label label-danger">deadlock</span>
+    </li>
+    <li>
+        @Html.ActionLink("Asynchronous stack blocked with .GetAwaiter().GetResult() on other context", "SCGreetingBlockedWithAwaiterResultOnOtherContext", "Greeting") <span class="label label-danger">deadlock</span>
+    </li>
+    <li>
+        @Html.ActionLink("Asynchronous stack blocked with .Result() on captured context", "SCGreetingBlockedWithResultOnCapturedContext", "Greeting") <span class="label label-danger">deadlock</span>
+    </li>
+    <li>
+        @Html.ActionLink("Fully synchronous", "SCGreeting", "Greeting")
+    </li>
+</ul>
+
+<p>
+    @Html.Partial("_GreetingPartial", Model)
+</p>

@@ -18,7 +18,7 @@ namespace BinaryMash.Playground.Async.BusinessLogic.Tests
         {
             var result = await _service.GetGreetingAsync("world");
             result.Greeting.ShouldBe("Hello, world");
-            result.HasSynchronisationContext.ShouldBe(true);
+            result.HasSynchronizationContext.ShouldBe(true);
             result.FinalCurrentThreadId.ShouldNotBe(result.InitialCurrentThreadId);
         }
 
@@ -27,7 +27,7 @@ namespace BinaryMash.Playground.Async.BusinessLogic.Tests
         {
             var result = _service.GetGreetingBlockedWithResultOnCapturedContext("world");
             result.Greeting.ShouldBe("Hello, world");
-            result.HasSynchronisationContext.ShouldBe(true);
+            result.HasSynchronizationContext.ShouldBe(true);
             result.FinalCurrentThreadId.ShouldNotBe(result.InitialCurrentThreadId);
         }
 
@@ -36,7 +36,7 @@ namespace BinaryMash.Playground.Async.BusinessLogic.Tests
         {
             var result = _service.GetGreetingBlockedWithAwaiterResultOnCapturedContext("world");
             result.Greeting.ShouldBe("Hello, world");
-            result.HasSynchronisationContext.ShouldBe(true);
+            result.HasSynchronizationContext.ShouldBe(true);
             result.FinalCurrentThreadId.ShouldNotBe(result.InitialCurrentThreadId);
         }
 
@@ -45,7 +45,7 @@ namespace BinaryMash.Playground.Async.BusinessLogic.Tests
         {
             var result = _service.GetGreetingBlockedWithAwaiterResultOnOtherContext("world");
             result.Greeting.ShouldBe("Hello, world");
-            result.HasSynchronisationContext.ShouldBe(true);
+            result.HasSynchronizationContext.ShouldBe(true);
             result.FinalCurrentThreadId.ShouldNotBe(result.InitialCurrentThreadId);
         }
     }

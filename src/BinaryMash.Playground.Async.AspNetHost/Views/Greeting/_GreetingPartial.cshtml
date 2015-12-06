@@ -1,0 +1,16 @@
+﻿@model BinaryMash.Playground.Async.AspNetHost.Models.GreetingViewModel
+@if (Model != null)
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span class="panel-title">Response from previous request (@DateTime.UtcNow)</span> <span class="pull-right">@Html.ActionLink("Clear", "Index", "Greeting")</span>
+        </div>
+        <div class="panel-body">
+
+            <div>Greeting: @Model.Greeting</div>
+            <div>Has SynchronizationContext: @Model.HasSynchronizationContext</div>
+            <div>Initial CurrentThread ID: @Model.InitialCurrentThreadId</div>
+            <div>Final CurrentThread ID: @Model.FinalCurrentThreadId</div>
+        </div>
+    </div>
+}

@@ -10,6 +10,11 @@ namespace BinaryMash.Playground.Async.BusinessLogic
             return await SayHelloAsync(name);
         }
 
+        public GreetingResult GetGreeting(string name)
+        {
+            return SayHello(name);
+        }
+
         public GreetingResult GetGreetingBlockedWithResultOnCapturedContext(string name)
         {
             return SayHelloAsync(name).Result;
@@ -29,13 +34,10 @@ namespace BinaryMash.Playground.Async.BusinessLogic
         {
             var result = new GreetingResult()
             {
-                HasSynchronisationContext = SynchronizationContext.Current != null,
+                HasSynchronizationContext = SynchronizationContext.Current != null,
                 InitialCurrentThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId,
                 Greeting = "Hello, " + name
             };
-
-//            await Task.Delay(1000);
-
 
             return await Task.Run(() =>
             {
@@ -43,7 +45,20 @@ namespace BinaryMash.Playground.Async.BusinessLogic
                 result.FinalCurrentThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
                 return result;
             });
+        }
 
+        private GreetingResult SayHello(string name)
+        {
+            var result = new GreetingResult
+            {
+                HasSynchronizationContext = SynchronizationContext.Current != null,
+                InitialCurrentThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId,
+                Greeting = "Hello, " + name
+            };
+
+            Thread.Sleep(1000);
+            result.FinalCurrentThreadId = System.Threading.Thread.CurrentThread.ManagedThreadId;
+            return result;
         }
     }
 }

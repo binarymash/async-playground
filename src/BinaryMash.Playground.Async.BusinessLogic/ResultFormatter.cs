@@ -9,7 +9,7 @@ namespace BinaryMash.Playground.Async.BusinessLogic
         {
             var builder = new StringBuilder();
 
-            builder.AppendFormat("Has SynchronisationContext: {0}{1}", result.HasSynchronisationContext, Environment.NewLine);
+            builder.AppendFormat("Has SynchronizationContext: {0}{1}", result.HasSynchronizationContext, Environment.NewLine);
             builder.AppendFormat("Initial CurrentThread Id: {0}{1}", result.InitialCurrentThreadId, Environment.NewLine);
             builder.AppendFormat("Final CurrentThread Id: {0}{1}", result.FinalCurrentThreadId, Environment.NewLine);
             builder.AppendFormat("Greeting: {0}{1}", result.Greeting, Environment.NewLine);
