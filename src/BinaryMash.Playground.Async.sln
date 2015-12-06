@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.Playground.Async
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMash.Playground.Async.AspNetHost", "BinaryMash.Playground.Async.AspNetHost\BinaryMash.Playground.Async.AspNetHost.csproj", "{23214DA4-5729-46B0-A5DE-A7616EB8D5C9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7D04512-39B8-46D3-BF09-2B85F4172664}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
